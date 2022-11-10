@@ -15,7 +15,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 
 @Entity
@@ -54,4 +56,7 @@ public class Feedback {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="busID")
 	private Bus bus;
+
+	
+	
 }
