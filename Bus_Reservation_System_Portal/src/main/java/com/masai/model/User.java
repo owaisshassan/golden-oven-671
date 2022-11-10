@@ -9,12 +9,14 @@ import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class User {
 
 	@Id
@@ -24,14 +26,14 @@ public class User {
 	private String password;
 	private String firstname;
 	private String lastName;
-	private long contact;
+	private String contact;
 	private String email;
 	
 	@OneToOne
 	private Reservation reservation;
 
 
-	public User(String userName, String password, String firstname, String lastName, long contact, String email,
+	public User(String userName, String password, String firstname, String lastName, String contact, String email,
 			Reservation reservation) {
 		super();
 		this.userName = userName;
@@ -42,6 +44,11 @@ public class User {
 		this.email = email;
 		this.reservation = reservation;
 	}
+
+
+	
+	
+	
 	
 	
 	

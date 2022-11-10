@@ -27,7 +27,7 @@ public class Reservation {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int reservationId;
+	private Integer reservationId;
 //	private Integer no_of_reservation;
 	private String reservationStatus;
 	private String reservationType;
@@ -37,6 +37,7 @@ public class Reservation {
 	private LocalTime reservationTime;
 	private String source;
 	private String destination;
+	
 	@OneToOne(cascade = CascadeType.ALL)
 	private Bus bus ; 
 	
