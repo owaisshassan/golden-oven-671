@@ -12,7 +12,7 @@ import com.masai.model.User;
 public interface UserService {
 
 	
-	public User addUser(User user,String key) throws UserException;
+	public User addUser(User user) throws UserException;
 	
 	public User updateUser(User user,String key) throws UserException;
 	

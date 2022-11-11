@@ -26,55 +26,58 @@ import com.masai.service.UserService;
 @RequestMapping("/brsp")
 public class UserController {
 	
-	//@Autowired
-	//private UserService userService; 
+	@Autowired
+	private UserService userService; 
 	
 	
 //   http://localhost:8888/brsp/users
-	//@PostMapping("/users")
-//	public ResponseEntity<User> addUserHandler(@RequestParam(required = false) String key, @RequestBody User user) throws UserException{
-//		User addedUser= userService.addUser(user, key);
-//		
-//		
-//		return new ResponseEntity<User>(addedUser, HttpStatus.CREATED);
-//	}
+	@PostMapping("/users")
+	public ResponseEntity<User> addUserHandler( @RequestBody User user) throws UserException{
+		User addedUser= userService.addUser(user);
+		
+		
+		return new ResponseEntity<User>(addedUser, HttpStatus.CREATED);
+	}
 	
 	
-
+//provide login id of the user you want to update
+//if mobile num provided matches with any already existing user, it will not be updated
+//change contact and hit the request	
+	
 //  http://localhost:8888/brsp/users	
-	//@PutMapping("/users")
-//	public ResponseEntity<User> updateUserHandler(@RequestParam(required = false) String key, @RequestBody User user) throws UserException{
-//		User updated= userService.updateUser(user, key);
-//		
-//		return new ResponseEntity<User>(updated, HttpStatus.OK);
-//	}
+	@PutMapping("/users")
+	public ResponseEntity<User> updateUserHandler(@RequestParam(required = false) String key, @RequestBody User user) throws UserException{
+		User updated= userService.updateUser(user, key);
+		
+		return new ResponseEntity<User>(updated, HttpStatus.OK);
+	}
 	
 	
 //  http://localhost:8888/brsp/users/userId	
-	//@DeleteMapping("/users/{id}")
-//	public ResponseEntity<User> deleteUserHandler(@PathVariable("id") int id, @RequestParam String key) throws UserException, AdminException{
-//		User delUser = userService.deleteUser(id,key);
-//		
-//		return new ResponseEntity<User>(delUser, HttpStatus.OK) ;
-//	}
+	@DeleteMapping("/users/{id}")
+	public ResponseEntity<User> deleteUserHandler(@PathVariable("id") int id, @RequestParam String key) throws UserException, AdminException{
+		User delUser = userService.deleteUser(id,key);
+		
+		return new ResponseEntity<User>(delUser, HttpStatus.OK) ;
+	}
 	
 	
 //  http://localhost:8888/brsp/users/userId		
-	//@GetMapping("/users/{userId}")
-//	public ResponseEntity<User> viewUserHandler(@PathVariable("userId") int id) throws UserException{
-//		User viewUser  = userService.viewUser(id) ;
-//		
-//		return new ResponseEntity<User>(viewUser, HttpStatus.ACCEPTED) ;
-//	}
+	@GetMapping("/users/{userId}")
+	public ResponseEntity<User> viewUserHandler(@PathVariable("userId") int id) throws UserException{
+		User viewUser  = userService.viewUser(id) ;
+		
+		return new ResponseEntity<User>(viewUser, HttpStatus.ACCEPTED) ;
+	}
 	
 	
 //  http://localhost:8888/brsp/users	
-	//@GetMapping("/users")
-//	public ResponseEntity<List<User>> viewAllUsersHandler() throws UserException{
-//		List<User> allUsers = userService.viewAllUsers() ;
-//		
-//		return new ResponseEntity<List<User>>(allUsers, HttpStatus.OK) ;
-//	}
+	@GetMapping("/users")
+	public ResponseEntity<List<User>> viewAllUsersHandler() throws UserException{
+		List<User> allUsers = userService.viewAllUsers() ;
+		
+		return new ResponseEntity<List<User>>(allUsers, HttpStatus.OK) ;
+	}
 	
 	
 	

@@ -9,6 +9,6 @@ import com.masai.model.Admin;
 public interface AdminRepo extends JpaRepository<Admin, Integer>{
 
 	
-	public Admin findByMobile(String mobile);
+	public Admin findByMobile(long mobile);
 	
 }

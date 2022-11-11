@@ -41,6 +41,19 @@ public class GlobalExceptionHandler {
 	}
 	
 	
+	@ExceptionHandler(LoginException.class)
+	public ResponseEntity<MyErrorDetails> loginExceptionHandler(LoginException le, WebRequest req){
+		
+		
+		    MyErrorDetails err= new MyErrorDetails();
+			err.setTimestamp(LocalDateTime.now());
+			err.setMessage(le.getMessage());
+			err.setErrorDetails(req.getDescription(false));
+				
+		return new ResponseEntity<MyErrorDetails>(err, HttpStatus.BAD_REQUEST);
+		
+	}
+	
 	
 	
 	

@@ -35,10 +35,8 @@ public class UserServiceImpl implements UserService{
 	
 	
 	@Override
-	public User addUser(User user, String key) throws UserException {
-		CurrentUserSession u= cusDao.findByUuid(key);
+	public User addUser(User user) throws UserException {
 		
-		if(u !=null) {
 			User us= userDao.findByContact(user.getContact());
 			
 			if(us!=null) {
@@ -46,9 +44,7 @@ public class UserServiceImpl implements UserService{
 			}else {
 				return userDao.save(user);
 			}
-		}else {
-			throw new UserException("No User Logged in with this key");
-		}
+		
 		
 	}
 
@@ -60,7 +56,7 @@ public class UserServiceImpl implements UserService{
 			 Optional<User> opt= userDao.findById(user.getUserLoginId());
 			 
 			 if(opt.get().getUserLoginId() != currUser.getUserId()) {
-				 throw new UserException("Invalid Request! Please Login first!");
+				 throw new UserException("Invalid Request! Please provide correct userLoginId!");
 			 }
 			 if(opt.isPresent()) {
 				 return userDao.save(user);
@@ -73,11 +69,12 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public User deleteUser(int userId, String key) throws UserException, AdminException {
-		CurrentAdminSession loggedInAdmin= casDao.findByUuid(key);
+	public User deleteUser(int userId, String key) throws UserException{
+//		CurrentAdminSession loggedInAdmin= casDao.findByUuid(key);
+		CurrentUserSession loggedInUser= cusDao.findByUuid(key);
 		
-		if(loggedInAdmin == null) {
-			throw new AdminException("Please check key, No Admin loggedIn with given key");
+		if(loggedInUser == null) {
+			throw new UserException("Please check key, No User loggedIn with given key");
 		}
 		
 		Optional<User> opt = userDao.findById(userId);

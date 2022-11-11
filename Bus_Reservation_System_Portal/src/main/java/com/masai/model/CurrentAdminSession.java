@@ -1,5 +1,7 @@
 package com.masai.model;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,10 +23,9 @@ public class CurrentAdminSession {
 	
 	@Id
 	@GeneratedValue(strategy =  GenerationType.AUTO)
-	private Integer adminId;
+	private Integer AdminId;
 	
-	private String adminUserName;
-	private String adminPassword;
-	private String mobile;
+	private String uuid;
+	private LocalDateTime localDateTime;
 
 }

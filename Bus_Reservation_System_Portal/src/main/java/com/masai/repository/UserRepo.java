@@ -9,7 +9,7 @@ import com.masai.model.User;
 public interface UserRepo extends JpaRepository<User, Integer>{ 
 
 	
-	public User findByContact(String contact);
+	public User findByContact(long contact);
 
 	
 }
