@@ -101,3 +101,71 @@ https://github.com/owaisshassan
 * `DELETE /reservation/userId/reservationId` : Cancel reservation by reservationId, userId
 
 
+### Swagger UI
+
+---
+
+<img src="![Swagger](https://user-images.githubusercontent.com/101388764/201465621-cab7de20-d7d2-44cb-a429-6853e0fa9f82.jpeg)" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage">
+
+---
+
+### Admin Controller
+
+---
+
+<img src="![Admin_Controller](https://user-images.githubusercontent.com/101388764/201465688-d847829a-165d-4f66-a3ba-70d51f3e633d.jpeg)" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage">
+
+---
+
+
+### User Controller
+
+---
+
+<img src="![User_Controller](https://user-images.githubusercontent.com/101388764/201465706-ad12e6be-9b67-4ea1-b934-adcd10203ffb.jpeg)" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage">
+
+---
+
+
+### Login Controller
+
+---
+
+<img src="![Login_Controller](https://user-images.githubusercontent.com/101388764/201465725-a7310f8d-82e0-42b7-83b2-a61ff8833525.jpeg)" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage">
+
+---
+
+### Route Controller
+
+---
+
+<img src="![Route_Controller](https://user-images.githubusercontent.com/101388764/201465739-f14ef31b-d567-4b53-983d-86e79c504c6b.jpeg)" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage">
+
+---
+
+### Bus Controller
+
+---
+
+<img src="![Bus_Controller](https://user-images.githubusercontent.com/101388764/201465751-96f5dcf3-9cc7-4011-af63-f135379337f0.jpeg)" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage">
+
+---
+
+### Reservation Controller
+
+---
+
+<img src="![Reservation_Controller](https://user-images.githubusercontent.com/101388764/201465819-e2f4f67b-1e18-477d-8f60-5da566d1511c.jpeg)" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage">
+
+---
+
+
+### Feedback Controller
+
+---
+
+<img src="![Feedback_Controller](https://user-images.githubusercontent.com/101388764/201465991-dd7b0f14-db4d-4485-ae62-8cc6ffe4ffd0.jpeg)" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage">
+
+---
+
+
