@@ -27,6 +27,7 @@
 
 - Admin Module
 - User Module
+- Login Module
 - Route Module
 - Bus Module
 - Reservation Module
@@ -66,7 +67,7 @@ https://github.com/owaisshassan
 
 ## Installation & Run
 
-- Before running the API server, you should update the database config inside the [application.properties](https://github.com/owaisshassan/golden-oven-671) file.
+- Before running the API server, you should update the database config inside the [application.properties](https://github.com/owaisshassan/golden-oven-671/blob/main/src/main/resources/application.properties) file.
 - Update the port number, username and password as per your local database config.
 
 ```
