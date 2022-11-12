@@ -1,15 +1,14 @@
 package com.masai.exceptions;
 
-public class BusException extends Exception {
+public class RouteException extends Exception{
 
-	public BusException() {
+	public RouteException() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public BusException(String message) {
+	public RouteException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
-	
 }

@@ -28,12 +28,14 @@ public class FeedbackController {
 	@Autowired
 	private FeedbackService feedbackService;
 	
+//	http://localhost:8888/feedbacks/userId/busID
 	@PostMapping("/feedbacks/{userId}/{busId}")
 	public ResponseEntity<Feedback> registerFeedback(@Valid @RequestBody Feedback feedback, @PathVariable("userId") Integer uId, @PathVariable("busId") Integer bId,@RequestParam(required = false) String key ) throws FeedbackException, UserException, BusException{
 		feedback.setFeedbackdatetime(LocalDateTime.now());
 		return new ResponseEntity<Feedback>(feedbackService.addFeedBack(feedback, bId, uId,key),HttpStatus.CREATED);
 	}
-	
+
+//	http://localhost:8888/feedbacks	
 	@PutMapping("/feedbacks")
 	public ResponseEntity<Feedback> updateFeedback(@Valid @RequestBody Feedback feedback,@RequestParam(required = false) String key ) throws FeedbackException, UserException{
 		feedback.setFeedbackdatetime(LocalDateTime.now());
@@ -41,12 +43,14 @@ public class FeedbackController {
 			
 	}
 	
+//	http://localhost:8888/feedbacks/feedbackID	
 	@GetMapping("/feedbacks/{id}")
 	public ResponseEntity<Feedback> getFeedback(@PathVariable("id") Integer feedbackId) throws FeedbackException{
 		return new ResponseEntity<Feedback>(feedbackService.viewFeedBack(feedbackId),HttpStatus.OK);
 		
 	}
-	
+
+//	http://localhost:8888/feedbacks	
 	@GetMapping("/feedbacks")
 	public ResponseEntity<List<Feedback>> getAllFeedback() throws FeedbackException{
 		List<Feedback> feedbackList = feedbackService.viewAllFeedBack();

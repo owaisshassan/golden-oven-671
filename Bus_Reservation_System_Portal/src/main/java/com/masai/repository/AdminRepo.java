@@ -3,13 +3,12 @@ package com.masai.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.masai.model.User;
+import com.masai.model.Admin;
 
 @Repository
-public interface UserRepo extends JpaRepository<User, Integer>{ 
+public interface AdminRepo extends JpaRepository<Admin, Integer>{
 
 	
-	public User findByContact(String contact);
-
+	public Admin findByMobile(String mobile);
 	
 }
