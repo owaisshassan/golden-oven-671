@@ -1,0 +1,36 @@
+package com.masai.model;
+
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
+import lombok.Data;
+
+
+
+@Data
+@Entity
+public class Admin {
+	
+	
+	@Id
+	@GeneratedValue(strategy =  GenerationType.AUTO)
+	private Integer adminId;
+	
+	@Min(value = 3, message = "adminUserName should be atleast of 3 letters")
+	@Max(value = 12, message = "adminUserName should not exceed 12 letters")
+	private String adminUserName;
+	
+	@NotNull(message = "please fill password!, password cannot be null")
+	private String adminPassword;
+	
+	@Min(value = 10, message = "mobile number should be atleast 10 digits")
+	@Max(value = 12, message = "mobile number should not exceed 12 digits")
+	private long mobile;
+
+}

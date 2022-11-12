@@ -1,0 +1,62 @@
+package com.masai.model;
+
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.validation.constraints.NotNull;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+public class Feedback {
+
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer feedBackId;
+	
+	@NotNull(message = "driverRating cannot be null!")
+	private Integer driverRating;
+	
+	@NotNull(message = "serviceRating cannot be null!")
+	private Integer serviceRating;
+	
+	@NotNull(message = "overallRating cannot be null!")
+	private Integer overallRating;
+	
+	
+	private String comments;
+	
+	
+	//@JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	@NotNull(message = "Arrival time cannot be null!")
+	@DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
+	private LocalTime feedbackdatetime;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="userID")
+	private User user;
+
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="busID")
+	private Bus bus;
+}
