@@ -12,7 +12,7 @@
 
 
  
-## Techstack
+## Techstacks
 
 - Java
 - Spring Framework
