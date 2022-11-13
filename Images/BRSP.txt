@@ -1,0 +1,112 @@
+//LoginDTO requestBody:
+
+{
+  "mobileNo":7006312783,
+  "password":"bhat@#1"
+}
+
+
+
+===================================================
+
+
+//Admin requestBody:
+
+{
+ 
+ "adminId": ,
+ "adminUserName":"khabarqus",
+  "adminPassword":"bhat@#1",
+   "mobile":"7006312783"
+
+}
+
+==================================================
+
+
+//User requestBody:
+
+    {
+	"userLoginId": ,
+	"userName": "owais",
+	"password": "123456",
+	"firstname": "owais",
+	"lastName": "bhat",
+	"contact": "7234567822",
+	"email": "owaishassan442@gmail.com"
+    }
+
+
+===============================================
+
+//route reqBody:
+
+
+        {
+            "routeId": ,
+            "routeFrom":"haryana",
+            "routeTo":"chandigarh",
+            "distance":123
+       
+        }	
+
+================================================
+
+//bus reqBody:
+
+ {
+ 
+  "busName":"Golden-oven-express",
+   "busRegNumber":"golden-671",
+   "driverName":"new-driver",
+    "busType":"volvo",
+    "routeFrom":"haryana",
+    "routeTo":"chandigarh",
+    "arrivalTime":"10:10:30",
+    "departureTime":"09:00:00",
+    "seats":25,
+    "availableSeats":4,
+    "farePerSeat":20,
+    "busJourneyDate":"2022-10-12"
+    
+}	
+
+
+==================================================
+
+//reservation reqBody:
+
+{
+	"reservationId": ,			
+	"reservationStatus": "done",
+      "no_of_reservation":2,
+	"reservationDate":"2022-11-15",
+	"reservationType": "VIP",
+	"source" : "haryana",
+	"destination": "chandigarh"
+}	
+
+
+
+=====================================================
+
+//feedback reqBody:
+
+ {
+    "feedBackId": ,
+    "driverRating":4,
+    "serviceRating":5,
+    "overallRating":7,
+    "comments":"good ride!" 
+    
+ }	
+
+
+=========================================================
+
+
+
+
+
+
+    
