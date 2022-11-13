@@ -63,15 +63,15 @@ Following ER diagram indicates the database tables and thier interaction which w
 
 
 ## Contributors
-https://github.com/Shaili-Srivastava
+[Team member : Shaili Srivastava] https://github.com/Shaili-Srivastava
 
-https://github.com/SamsonSeemal
+[Team member : Samson Seemal] https://github.com/SamsonSeemal
 
-https://github.com/Saurabhpatel0894
+[Team member : Saurabh Patel] https://github.com/Saurabhpatel0894
 
-https://github.com/abhinav110695
+[Team member : Abhinav Singh] https://github.com/abhinav110695
 
-https://github.com/owaisshassan
+[Team Lead : Owaiss Hassan Bhat] https://github.com/owaisshassan
 
 ## Installation & Run
 
